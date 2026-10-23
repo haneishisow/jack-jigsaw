@@ -15,15 +15,16 @@ main{max-width:720px;margin:auto;padding:16px 12px 36px}.intro{font-size:14px;li
 #win{display:none;margin-top:14px;text-align:center;padding:18px;background:#fff7dd;border:1px solid #ead28b;border-radius:14px}#win h2{font-size:22px;margin:0 0 8px}#win p{font-size:14px;line-height:1.6}#mapButton{display:block;text-decoration:none;color:white;background:var(--green);padding:14px;border-radius:10px;font-weight:bold}
 .note{font-size:11px;line-height:1.6;color:#6c7973;margin:16px 2px}@media(min-width:600px){#tray{gap:10px;padding:12px}}
 </style></head>
-<body><header><small>TREASURE HUNT</small><h1>ジャックのジグソー</h1><p>16ピースを完成させて、宝箱の場所を見つけよう</p></header>
-<main><p class="intro">写真を手がかりに、下のピースをドラッグして盤面の正しい場所へ運ぼう。</p>
+<body><header><small>TREASURE HUNT</small><h1>ジャックのジグソーパズル</h1><p>16ピースのパズルを完成させてください。</p></header>
+<main><p class="intro">下のピースをドラッグして盤面の正しい場所へ運ぼう。</p>
 <section class="panel"><div class="status"><strong>ジグソーパズル</strong><span class="pill" id="progress">0 / 16 ピース</span></div>
 <div id="boardWrap"><canvas id="board" width="640" height="640" aria-label="ジグソーパズル盤面"></canvas></div>
 <div id="trayTitle">ピース置き場</div><div id="tray"></div>
 <div class="buttons"><button id="shuffle">ピースを並べ直す</button><button id="reset">最初から</button></div>
-<p class="hint">ピースを盤面へドラッグ！場所が合っていればピースがはまる。</p></section>
-<section id="win"><h2>パズル完成！</h2><p>16ピース全部そろった！地図をたよりに宝箱を探しに行こう！</p><a id="mapButton" target="_blank" rel="noopener">Googleマップで宝箱の場所を見る</a></section>
-<p class="note">主催者向け：公開前にソース内の TREASURE_LAT / TREASURE_LNG を実際の座標に変更してください。現在はサンプル座標です。座標と正解判定はHTMLに含まれるため、詳しい人には見える可能性があります。</p></main>
+<p class="hint">ピースを盤面へドラッグ！場所が合っていればピースがはまる！</p></section>
+<section id="win"><h2>パズル完成！</h2><p>16ピース全部そろった！地図の場所を探せ！</p><a id="mapButton" target="_blank" rel="noopener">Googleマップで宝箱の場所を見る</a></section>
+//主催者向け：公開前にソース内の TREASURE_LAT / TREASURE_LNG を実際の座標に変更してください。現在はサンプル座標です。座標と正解判定はHTMLに含まれるため、詳しい人には見える可能性があります。
+</main>
 <script>
 const TREASURE_LAT=36.543059, TREASURE_LNG=139.877637; // 公開前に変更
 const N=4,S=160,BOARD=640,TAB=0.22*S,SNAP=0.19*S;
