@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#173b32"><title>ジャックのジグソー宝探し</title>
+<meta name="theme-color" content="#173b32"><title>ジャックのジグソーパズル</title>
 <style>
 :root{--green:#173b32;--paper:#f8f7f3;--ink:#20342d;--line:#d7ddd7;--gold:#f2c766}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif}
@@ -16,13 +16,13 @@ main{max-width:720px;margin:auto;padding:16px 12px 36px}.intro{font-size:14px;li
 .note{font-size:11px;line-height:1.6;color:#6c7973;margin:16px 2px}@media(min-width:600px){#tray{gap:10px;padding:12px}}
 </style></head>
 <body><header><small>TREASURE HUNT</small><h1>ジャックのジグソー</h1><p>16ピースを完成させて、宝箱の場所を見つけよう</p></header>
-<main><p class="intro">写真を手がかりに、下のピースを指でつかんで盤面の正しい場所へ運ぼう。ピースは本物のジグソー形だよ！</p>
+<main><p class="intro">写真を手がかりに、下のピースをドラッグして盤面の正しい場所へ運ぼう。</p>
 <section class="panel"><div class="status"><strong>ジグソーパズル</strong><span class="pill" id="progress">0 / 16 ピース</span></div>
 <div id="boardWrap"><canvas id="board" width="640" height="640" aria-label="ジグソーパズル盤面"></canvas></div>
 <div id="trayTitle">ピース置き場</div><div id="tray"></div>
 <div class="buttons"><button id="shuffle">ピースを並べ直す</button><button id="reset">最初から</button></div>
-<p class="hint">ピースを指で押さえたまま盤面へドラッグしてね。正しい場所に近づけて離すと、ピースがはまるよ。</p></section>
-<section id="win"><h2>パズル完成！</h2><p>16ピース全部そろったよ。地図をたよりに宝箱を探しに行こう！</p><a id="mapButton" target="_blank" rel="noopener">Googleマップで宝箱の場所を見る</a></section>
+<p class="hint">ピースを盤面へドラッグ！場所が合っていればピースがはまる。</p></section>
+<section id="win"><h2>パズル完成！</h2><p>16ピース全部そろった！地図をたよりに宝箱を探しに行こう！</p><a id="mapButton" target="_blank" rel="noopener">Googleマップで宝箱の場所を見る</a></section>
 <p class="note">主催者向け：公開前にソース内の TREASURE_LAT / TREASURE_LNG を実際の座標に変更してください。現在はサンプル座標です。座標と正解判定はHTMLに含まれるため、詳しい人には見える可能性があります。</p></main>
 <script>
 const TREASURE_LAT=36.5550, TREASURE_LNG=139.8820; // 公開前に変更
